@@ -51,6 +51,12 @@ a{
 
 @media (max-width: 767px) {
     .main{
-        background-color: blue;
+        background-color: black;
+    }
+    .name{
+        color: white;
+    }
+    p{
+        color: white;
     }
 }
