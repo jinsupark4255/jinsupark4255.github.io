@@ -1,0 +1,56 @@
+header{
+    padding-top: 60px;
+}
+
+h1{
+    font-size: 80px;
+}
+.name{
+    padding-top: 80px;
+}
+
+.lion{
+    display: flex;
+    flex-direction: column;
+}
+
+body{
+    height: 700px;
+    max-width: 1380px;
+    margin: 0 auto;
+}
+.nav{
+    height: 15%;
+    text-align: center;
+}
+.main{
+    max-width: 1380px;
+
+}
+.sec{
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.foot{
+    height: 15%;
+    text-align: center;
+}
+p{
+    text-align: center;
+    font-weight: bold;
+}
+.copyright{
+    margin-top: 30px;
+}
+a{
+ text-decoration: none;
+ color: black;
+}
+
+@media (max-width: 767px) {
+    .main{
+        background-color: blue;
+    }
+}
