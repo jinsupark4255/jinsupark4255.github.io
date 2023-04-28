@@ -9,7 +9,6 @@ function addTask(task){
     list.appendChild(newTask);
 }
 
-
 input.addEventListener("keyup",function(event) {
     if(event.keyCode === 13){
         if(input.value !== ""){
