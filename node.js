@@ -1,30 +1,20 @@
-let input = require('fs').readFileSync('dev/stdin').toString().split(' ');
-const H = parseInt(input[0]);  // 시
-const M = parseInt(input[1]);  // 분
+const input = document.querySelector(".app-insert input");//input 박스
+const toDos = document.querySelector(".app-list");//만들어지는 박스
 
-
-let rH,rM;
-if(H==0){
-    if(M<45){
-        rH=23;
-        rM=60-(45-M);
-    }
-    
-    else{
-        rH = H;
-        rM=M-45;
-    }
-}
-else{
-    if(M<45){
-        rH=H-1;
-        rM=60-(45-M);
-    }
-    
-    else{
-        rH = H;
-        rM=M-45;
-    }
+function addTask(task){
+    let newTask = document.createElement("li");
+    newTask.setAttribute("class","task");
+    newTask.innerHTML = task + '<a href="javascript:;" class="remove-task">remove</a>' 
+    let list= document.querySelector(".app-list ul");
+    list.appendChild(newTask);
 }
 
-console.log(rH,rM);
+
+input.addEventListener("keyup",function(event) {
+    if(event.keyCode === 13){
+        if(input.value !== ""){
+            addTask(input.value);
+            input.value="";
+        }
+    }
+},false);
